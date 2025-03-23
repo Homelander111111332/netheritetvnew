@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài viết</title>
+    <style>
+        @font-face {
+            font-family: 'FVF Fernando 08';
+            src: url('fonts/FVF-Fernando-08.ttf') format('truetype');
+        }
+        body {
+            font-family: 'FVF Fernando 08', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #ae445a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70px;
+        }
+        .header img {
+            height: 40px; /* Điều chỉnh kích thước logo nếu cần */
+        }
+        .container {
+            padding: 20px;
+        }
+    </style>
+    <script defer src="post.js"></script>
+</head>
+<body>
+    <div class="header">
+        <img src="logo.jpg" alt="Logo">
+    </div>
+    <div class="container">
+        <a href="index.html">⬅ Quay lại</a>
+        <div id="post-content">Đang tải...</div>
+    </div>
+</body>
+</html>
