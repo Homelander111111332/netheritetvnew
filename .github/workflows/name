@@ -1,0 +1,26 @@
+name: Run Pyth
+
+on:
+  push:
+    branches:
+      - main  # Chạy khi có thay đổi trên nhánh main
+
+jobs:
+  serve:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Lấy code từ GitHub
+        uses: actions/checkout@v4
+
+      - name: Cài đặt Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Chạy Python HTTP Server
+        run: |
+          python -m http.server 8000 &
+
+      - name: Giữ cho server chạy (Dùng tmate để SSH vào GitHub Actions)
+        uses: mxschmitt/action-tmate@v3
